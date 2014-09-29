@@ -1,0 +1,64 @@
+.md-button {
+    overflow : hidden; 
+    position : relative;
+    .hide {
+        opacity : 0;
+    }
+    .circle {
+        position : absolute;
+        top : 0;
+        left : 0;
+        width : 50px;
+        height : 50px;
+        border-radius : 50%;
+        opacity : 0;
+        &.white {
+            background-color : rgba(255, 255, 255, 0.39);
+        }
+        &.gray {
+            background-color : rgba(119, 119, 119, 0.39);
+        }
+    }
+    &.eff-white {
+        opacity : 0.9;
+    }
+    &.md-icon-rotate {
+        position : relative;
+        .rotate-before,.rotate-after {
+            display : block;
+            position : absolute;
+            top : 0;
+            left : 0;
+        }
+    }
+}
+
+.action_rotate {
+    -webkit-animation: action_rotate 300ms ease forwards;
+}
+
+@-webkit-keyframes action_rotate  {  
+    from {
+        -webkit-transform: rotate(0deg);  
+        -moz-transform: rotate(0deg);          
+    }
+    to {
+        -webkit-transform: rotate(360deg);  
+        -moz-transform: rotate(360deg);          
+    }
+}  
+
+.back_rotate {
+    -webkit-animation: back_rotate 500ms ease forwards;
+}
+
+@-webkit-keyframes back_rotate  {  
+    from {
+        -webkit-transform: rotate(0deg);  
+        -moz-transform: rotate(0deg);          
+    }
+    to {
+        -webkit-transform: rotate(-360deg);  
+        -moz-transform: rotate(-360deg);          
+    }
+} 
